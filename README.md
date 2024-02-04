@@ -1,6 +1,6 @@
 # VSsnippets
 кастомные сниппеты для вс <br>
-поместить в папку C:\Users\...\Documents\Visual Studio 2022\Code Snippets\Visual C++\My Code Snippets<br>
+поместить в папку C:\Users\...\Documents\Visual Studio 2022\Code Snippets\Visual C++\My Code Snippets. можно так же просто клонировать туда репозиторий<br>
 base starting - импортирует iostream, Windows.h, создает main функцию и устанавливает кодировку 1251. сокращения: winconsole, win<br>
 file open - открытие файла с проверкой на успешность открытия. сокращения: f<br>
 include Windowsh - расширяется в #include <Windows.h>. сокращение: iwin<br>
