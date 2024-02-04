@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Windows Console Code</Title>
+			<Shortcut>winconsole</Shortcut>
+			<Shortcut>win</Shortcut>
+			<Description>Include Windows.h and set console code page</Description>
+			<Author>Your Name</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp">
+				<![CDATA[#include <Windows.h>
+#include <iostream>
+using namespace std;
+
+int main() {
+    SetConsoleOutputCP(1251);
+    $end$
+	
+    return 0;
+}
+        ]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

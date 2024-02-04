@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>сравнивает две строки</Title>
+			<Shortcut>myStrcmp</Shortcut>
+			<Description>функция сравнения двух строк</Description>
+			<Author>Force!</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp">
+				<![CDATA[int myStrcmp(const char* str1, const char* str2) { // для сравнения берём два указателя на строку
+while (*str1 != '\0' && *str2 != '\0' && *str1 == *str2) { // пока обе строки не закончатся (!='\0') и пока они не станут посимвольно равными
+//увеличиваем значения указателя
+str1++;
+str2++;
+}
+// Если после выхода из цикла обе строки закончились (==\0), то они равны
+if (*str1 == '\0' && *str2 == '\0') {
+    return 0;
+}
+
+// Возвращаем 1, если str1 длиннее str2, иначе -1
+return (*str1 > *str2) ? 1 : -1;
+}
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

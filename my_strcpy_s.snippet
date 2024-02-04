@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>копирует строки</Title>
+			<Shortcut>mystrcpy</Shortcut>
+			<Description>функция копирования двух строк</Description>
+			<Author>Force!</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp">
+				<![CDATA[void my_strcpy_s(char* destination, size_t dest_size, const char* source) {
+	if (destination == nullptr || source == nullptr || dest_size == 0) {
+		// Обработка некорректных аргументов
+		std::cerr << "Неверные аргументы в my_strcpy_s\n";
+		return;
+	}
+
+	size_t i; // size_t - тип данных, который используется для представления размеров объектов в памяти
+	for (i = 0; i < dest_size - 1 && source[i] != '\0'; ++i) {  //dest_size - 1 так как еще надо записать символ конца строки \0. source[i] != '\0' будет означать, что строка источника закончилась
+		destination[i] = source[i];
+	}
+
+	// Добавление завершающего символа '\0'
+	destination[i] = '\0';
+}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
