@@ -5,7 +5,7 @@
 			<Title>Open file and check succes</Title>
 			<Shortcut>f</Shortcut>
 			<Description>open file and check</Description>
-			<Author>Force!</Author>
+			<Author>Force</Author>
 			<SnippetTypes>
 				<SnippetType>Expansion</SnippetType>
 			</SnippetTypes>
@@ -15,14 +15,14 @@
 				<Literal>
 					<ID>expression</ID>
 					<ToolTip>Выражение</ToolTip>
-					<Default>of</Default>
+					<Default>filename</Default>
 				</Literal>
 			</Declarations>
 			<Code Language="cpp">
-				<![CDATA[	$expression$stream file(fileName);
+				<![CDATA[	std::ofstream file($expression$);
 
 	if (!file.is_open() || file.fail() || file.bad()) {
-		std::cerr << "Не удалось открыть файл\n";
+		std::cout << "Не удалось открыть файл " << $expression$ << '\n';
 		return;
 	}]]>
 			</Code>
